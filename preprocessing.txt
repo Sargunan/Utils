@@ -1,0 +1,7 @@
+miss1 = train.isnull().sum()/len(train)
+miss = miss1[miss1 > 0]
+miss.sort_values(inplace=True)
+print (miss)
+
+for name, val in miss.iteritems():
+    print (name , val)
